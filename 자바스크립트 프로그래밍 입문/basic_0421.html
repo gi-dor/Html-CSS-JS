@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    console.log("hello nodejs")
+  //  alert("Hello nodeJS!!!!");
+   // 2-2 
+   console.log("JavaScript Programming");
+    
+    
+
+
+
+    // 2- 15
+       
+    let out = 0;
+    out +=52;
+    out +=273;
+    out += 103;
+    
+    console.log("예제 2-19"); 
+    console.log(out);
+    let num = 10;
+    console.log(num);
+    console.log(num++);
+    console.log(num--);
+    console.log(num)
+
+    console.log("2-19");
+    
+    console.log("num = "+num);
+    console.log("++num = "+ ++num);
+    console.log("num-- = "+ --num);
+    console.log("--num = "+ num);
+
+    console.log("2-21");
+    console.log("num"+ num);
+    console.log("num++ = "+ num++);
+    console.log("++num = "+ ++num); 
+    console.log("num-- = "+ num--);
+    console.log("--num = " + --num);
+    
+    console.log("2-22");
+
+    let num2 = 10;
+    console.log(num2);
+    num++;
+    num++;
+    console.log(num);
+    console.log(num);   
+    num--;
+    num--;
+    console.log(num);
+
+    console.log(Number('52'));
+    console.log(Number('52.273'));
+    console.log(Number(true));
+    console.log(Number(false));
+    console.log(Number("반가워"));  // 숫자로 변환할수 없느 ㄴ문자열
+
+    let nan = Number ("안녕");
+
+    console.log(nan == nan);
+    console.log(nan != nan);
+    
+    // isNAN() 함수로 NaN 인지 확인
+    console.log(isNaN(nan));
+
+    console.log("2-23");
+
+    console.log(Number("52"));
+    console.log(Number("52.273"));
+    console.log(Number(true));
+    console.log(Number(false));
+    console.log(Number("안녕하세요"));
+
+    console.log("2-26");
+    console.log(52+273);
+    console.log("52" + 273);
+    console.log(52+"273");
+    console.log("52"+"273");
+
+    console.log("2-27");
+    console.log("52"- 273);
+    console.log(52 -"273");
+    console.log("52" / 273);
+    console.log("52" * 273);
+    console.log("52" % 273);
+
+    console.log(`52 == "52": ${52 == "52"}`);
+    console.log(`52 === "52": ${52 === "52"}`);
+    console.log();
+    console.log(`0 == "": ${0 == ""}`);
+    console.log(`0 === " " : ${0 === " "}`);
+
+    // 상수의 선언
+    const cs = "변경이 불가능함";
+    console.log(cs);
+    // const cs = 11;   // 변경 불가능한 상수임
+    // console.lgon(cs);   
+
+    console.log('3-1');
+    let input = 32;
+    if(input % 2 == 0){
+        console.log("짝수");
+    }
+
+    if(input % 2 ==1 ){
+        console.log("홀수");
+    }
+
+    console.log('3-2');
+    let date = new Date();
+    console.log(date.getFullYear());
+    console.log(date.getMonth()+1);
+    console.log(date.getDay());
+    console
+    console.log();
+    console.log(date.getHours());
+    console.log(date.getMinutes());
+    console.log(date.getSeconds());
+
+    console.log(date.getHours() +"시간" + date.getMinutes() +"분"+ date.getSeconds()+"초");
+
+    console.log('3-3');
+    let date2 = new Date();
+
+     if (date2.getHours < 12){
+        console.log('오전 입니다')
+     } 
+     if (date2.getHours){
+        console.log('오후 입니다');
+     }
+
+
+     console.log('3-4');
+     let inp = 32;
+     if ( inp %2 == 0){
+        console.log('짝수 입니다');
+     }else {
+        console.log('짝수가 아닙니다');
+     }
+
+     console.log('3-5');
+
+     let dat = new Date();
+     if (date.getHours < 12){
+        console.log('오전 입니다');
+     }else {
+        console.log('오후 입니다');
+     }
+
+     console.log('3-6');
+
+     let date3 = new Date();
+     let hour = date3.getHours();
+
+     if(hour > 11){
+        console.log('아침 식사 시간입니다');
+        }else {
+            if (hour < 15 ){
+            console.log('점심 먹을 시간입니다');
+            }else {
+            console.log('저녁 먹을시간입니다');
+            }
+     } 
+
+    console.log('3-7')
+    let date4 = new Date();
+    let hours = date4.getHours();
+
+    if(hours < 11){
+        console.log('아침 식사시간');
+    }else if (hours < 15){
+        console.log('점심 식사시간');
+    }else {
+        console.log('저녁 식사시간');
+    }
+     
+
+    console.log('3-8');
+    let score = 3.6;
+
+    if (score == 4.5)
+        console.log('goe');
+    else if (4.2 <= score && score < 4.5)
+        console.log('사랑');
+    else if (3.5 <= score && score < 4.2)
+        console.log('수호자');
+    else if(2.8 <= score && 3.5)
+        console.log('일반인');
+    else if (2.3 <= score && score < 2.8)
+        console.log('소시민');
+    else if (1.0 <= score && score < 1.75)
+        console.log('천민');
+    else if ( 0 < score && score < 1.0)
+        console.log('재수강');
+    else console.log('ffffffffffffff');
+
+    console.log('3-9');
+
+    let score1 = 4.3 ;
+
+    if(score1 == 4.5)
+            console.log('god');
+        else if (4.0 <= score1)
+            console.log('A');
+        else if (3.5 <= score1)
+            console.log('B');
+        else if (3.0 <= score1)
+            console.log('C');
+        else if (2.5 <= score1)
+            console.log('D');
+        else
+             console.log('F');
+
+
+    console.log('4-2');
+    for ( let i = 0; i<10; i++){
+        console.log('출력');
+    }
+
+    console.log('4-3');
+    let arr =  [52,16 ,'기선','아침식사',false, true , '저녁식사']
+    arr[0] = 0;
+    arr[7] = 'Integer';
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log('arr[5] = '+ arr[5]);
+    console.log('arr[6] = '+arr[6]);
+    console.log('arr[7] = '+arr[7]);
+    console.log('arr[8] = '+arr[8]);
+    
+    console.log(arr);
+    console.log(arr.length);
+
+    console.log('4-4');
+    let arr1 = [52,38,99,10,84,2];
+    console.log(arr1);
+    console.log('arr1.length = '+arr1.length);
+
+    console.log('4-6');
+
+    let i = 0 ;
+    let arr11 = [14,23,54,22,2,3];
+
+    while (i< arr11.length){
+        console.log(i+'번째 요소'+ arr11[i]);
+        i++;
+    }
+
+    console.log('4-7')
+
+    let out1 =0;
+    for(let i = 0; i<=10; i++){
+        out1 += i;
+    }
+    console.log(out1);
+
+    console.log('4-8')
+    let out2 = 1;
+    for(let i = 1; i<= 20; i++){
+        out2 *= i;
+    }
+    console.log(out2);
+
+
+    // 함수 생성
+    // let 함수이름 = function() {} ;
+
+    console.log('5-1');
+    
+    // 익명함수
+    let 함수 = function(){
+        console.log(' 첫 함수');
+        console.log(' 두번째 함수');
+    };
+
+    // 함수()  함수 호출
+     함수();
+     console.log(함수)   //함수 자체를 출력
+
+     console.log('5-2');
+
+     // 선언적함수
+
+     function 함수1 (){
+        console.log('선언 함수')
+        console.log('첫번째 함수');
+        console.log('두번째 함수');
+     }
+
+     함수1();
+     console.log(함수1);
+     
+     // 화살표 함수
+     let 함수2 = () => {
+        console.log('화살표 함수');
+        console.log('첫번째 함수');
+        console.log('두번째 함수');
+     }
+     console.log(함수2);
+     함수2();
+
+     // 함수 기본형태 
+     function 함수_이름(매개변수){
+        함수_코드;
+        return  리턴값;
+     }
+        
+     
+     function power(x){
+        return x * x;
+     }
+     power();
+     console.log(power(10));
+     console.log(power(4));
+
+     function multi(x,y){
+        return x*y;
+     }
+     console.log(multi(8,9));
+     console.log(multi(5,-11));
+
+     let power2 = (x) => x*x
+     console.log(power2(10));
+     console.log(power2(11));
+
+   
+
+    </script>
+</body>
+</html>
