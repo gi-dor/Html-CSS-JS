@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 역for 문 
+        // 4-10
+    let arr = [ 1,2,3,4,5,6,7];
+    for (let i = arr.length-1; i>=0 ; i--){
+        console.log(arr[i]);
+    }
+
+    // for in 반복문 , for of 반복문
+    let arr0 = ["사과","배","포도","딸기","바나나"];
+
+    for(let i in arr0){
+        console.log(`${i}번째 요소 : ${arr0 [i]}`);
+    }
+
+    console.log('---------------구분선------------')
+
+    for(let item of arr0){
+        console.log(item);
+    }
+
+    let out0 = '';
+
+    for ( let i = 0; i< 10; i++){
+        for (let j = 0; j<i+1; j++){
+            out0 += '*';
+        }
+        out0 += '\n';
+    }
+    console.log(out0);
+    // break 키워드
+    let i = 0;
+    let arr1 = [1,31,273,57,8,11,32];
+    let out1;
+
+    while(true){
+        if(arr1[i] % 2 ==0){
+            out1 = arr1[i];
+            break;
+        }
+        i = i+1;
+    }
+    console.log(`처음 발견한 짝수는 ${out1} 입니다`)
+
+    // 함수
+
+    // 1. 익명함수 
+    let functionA = function(){
+        console.log('함수의 첫번째');
+        console.log('함수의 두번째');
+    }
+
+    functionA();
+    console.log(functionA);
+
+
+    // 선언적 함수
+    function functionB(){
+        console.log('B함수 첫번쨰');
+        console.log('B함수 두번째');
+    }
+
+    functionB();
+    console.log(functionB);
+
+        // 화살표 함수
+        // () => {}
+        let functionC = () => {
+            console.log('화살표 함수 1번');
+            console.log('화살표 함수 2번');
+        }
+        console.log(functionC);
+        functionC();
+
+        // 함수의 기본형태 
+        function 함수_이름(매개_변수){
+            함수_코드;
+            return 리턴_값;
+        }
+
+        function power(x){
+            return x * x ;
+        }
+        console.log(power(10));
+        console.log(power(20));
+
+        // 5-5  매개변수가 여러개인 함수
+        function multi(x,y){
+            return x* y;
+        }
+
+        console.log(multi(10,17));
+        console.log(multi(20,30));
+
+        // 5-6 return 이 없는 함수
+        function print(message){
+            console.log(`"${message}" 이라고 말했씁니다`);
+        }
+
+        console.log(print('집가고 싶다'));
+        console.log(print('js 너무 어려워') );
+
+        // 5-7 화살표 함수
+        let power1 = (x) => x * x
+        console.log(power1(2));
+        console.log(power1(20));
+        
+        // 5-8 매개변수와 리턴 (1)
+        // min 부터 max 까지 숫자를 더해서 반환하는 함수
+        function sum(min,max){
+            let sum =0;
+            for(let i = min ; i <= max; i++){
+                sum += i;
+            }
+            return sum;
+        }
+        console.log(sum(1,100));
+
+        // 5-9 min부터 max 까지 숫자를 곱해서 반환하는 함수
+        function multiply(min,max){
+            let multi = 1;
+            for(let i = min; i <= max; i++){
+                multi *= i;
+            } 
+            return multi;
+        }
+        console.log(multiply(1,10));
+
+        // 5 - 10 
+        // 매개변수를 입력하지 않고 함수 호출
+        function print(name, count) {
+            console.log(` ${name}이/가 ${count}개 있습니다`);
+        }
+        print('사과',10);
+        print('사과');
+
+        // 5 - 11 
+        function print(name, count){
+            if(typeof (count) == 'undefined'){
+                count = 1;
+            }
+            console.log( `${name}이/가 ${count}개 있습니다`);
+        }
+        print('apple');
+
+        // 5-12 default 매개변수를 활용한 매개변수 초기화
+        function print (name,count =1){
+            console.log(` ${name}이/가  ${count}개 있습니다`);
+
+        }
+        print('사과');
+
+
+        // 콜백함수 
+        // 5 - 14
+        function callfiveTimes(callback){
+            for (let i = 0; i< 5; i++){
+                callback();
+            }
+        }
+        
+        callfiveTimes(function(){
+            console.log('함수호출');
+        })
+
+        // 표준 내장함수 ?
+        // 1. 숫자 변환 함수 
+        // parseInt()   : 문자열을 정수로 변환
+        // parseFloat() : 문자열을 실수로 변환
+
+        // 5-15
+        let inputA ='52';
+        let inputB = '52.273';
+        let inputC = '1401동';
+
+        console.log(parseInt(inputA));
+        console.log(parseInt(inputB))
+        console.log(parseFloat(inputB));
+
+        console.log(parseInt(inputC));
+
+        // 타이머 함수 
+    //     // 1초마다
+    //     setTimeout(function(){
+    //         console.log('1초가 지났습니다');
+    //     }, 1000);
+
+    //     // 1초 후에
+    //    let id =  setInterval(function(){
+    //         console.log('1초 마다 호출함');
+    //     }, 1000);
+
+
+         // 타이머 정지
+         //   clearInterval(id);  
+       
+        // 익명함수와 선언 함수의 생성순서
+
+        // 선언함수 = 함수의 이름을 정해서 함수를 선언
+        // function 함수이름A () {  }
+
+        // 익명함수 함수가 선언되는 즉시 변수에 할당됨 - 일회용 함수
+        // let va = function 함수B() { }
+
+        let 변수; 
+        변수 = 10;
+        변수 = 20;  // 기존 값 10 대신 20으로 덮어씌움
+        console.log(변수); 
+
+        // 5 -19
+        let 함수;
+        함수 = function(){console.log('1번 함수'); };
+        함수 = function(){console.log('2번 함수'); };
+
+        함수();
+
+        // 5 - 20
+        함수1 = function(){console.log('첫번째 함수'); };   // 익명함수
+        function 함수1 () {console.log('두번째 함수'); };   // 선언함수
+        함수1();
+
+        // 익명함수는 선언함수를 덮어쓴다
+        
+        // 예시
+        function fu(){console.log('선언함수')};
+        var fu = function(){console.log('익명함수'); };
+       
+        
+        fu();
+
+        // 예시 1
+        함수 = function() {console.log('1-1');};    // 익명함수
+        함수 = function () {console.log('1-2');};   // 익명함수
+        함수();
+        // 예시 2
+        함수1 = function(){console.log('2-1');}; // 익명함수
+        function 함수1(){console.log('2-2');};  // 선언함수 
+        함수1();
+        // 출력순위 익명함수 > 선언함수 - 익명함수가 선언함수를 덮어씀
+
+        // 예시 3
+        function 함수3(){console.log('3-1');}; // 선언함수
+        함수3 = function() {console.log('3-2');};   // 익명함수
+        함수3();
+
+        // 예시 4 
+        function 함수4 (){ console.log('4-1');};
+        function 함수4() {console.log('4-2');}; 
+        함수4();
+
+       // let 키워드를 사용 하면 선언함수와 동일한 이름의 변수를 생성할수 없음
+          
+
+
+</script>
+</body>
+</html>
